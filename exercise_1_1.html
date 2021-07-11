@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Exercise 1.1 - Exploring the lab environment | workshops</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Exercise 1.1 - Exploring the lab environment">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Training Course for Ansible Automation Platform">
+<meta property="og:description" content="Training Course for Ansible Automation Platform">
+<link rel="canonical" href="https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/">
+<meta property="og:url" content="https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/">
+<meta property="og:site_name" content="workshops">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Exercise 1.1 - Exploring the lab environment">
+<script type="application/ld+json">
+{"description":"Training Course for Ansible Automation Platform","url":"https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/","@type":"WebPage","headline":"Exercise 1.1 - Exploring the lab environment","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/scale.fix.js.download"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header-container">
+          <a href="https://ansible.com/">
+            <img class="header-logo" src="./images/redhat-ansible-logo.svg" title="Red Hat Ansible" alt="Red Hat Ansible">
+          </a>
+          <a class="header-link" href="https://ansible.github.io/workshops/">
+            Workshops Home
+          </a>
+        </div>
+      </header>
+
+      <section>
+	        <br><a href="index.html">Workshop Home</a>
+        <h1 id="exercise-11---exploring-the-lab-environment">Exercise 1.1 - Exploring the lab environment</h1>
+
+<p><strong>Read this in other languages</strong>: <br>
+<a href="https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/README.md"><img src="./images/uk.png" alt="uk"> English</a>,  <a href="https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/README.ja.md"><img src="./images/japan.png" alt="japan"> ???</a>, <a href="https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/README.fr.md"><img src="./images/fr.png" alt="france"> Français</a>.<br></p>
+
+<h2 id="objective">Objective</h2>
+
+<p>The objective of this lab is to provide you an intro to using IBM QRadar and automating it with Ansible, and to give you a deeper understanding and hands on experience how to automate security tools used by security operators. For that we will tackle three security use cases rather typical for the day-to-day challenges of security operatos. While all of them will interact with roughly the same toolset, each use case shows a different perspective (security analyst, firewall operator, IDS specialist) and thus a different point of view on the available tools.</p>
+
+<p>We have set up a common set of security related tools:</p>
+
+<ul>
+  <li>a Security Information and Event Management (SIEM), here <a href="https://www.ibm.com/security/security-intelligence/qradar">QRadar</a></li>
+  <li>a platform for Automation here <a href="https://https://www.redhat.com/en/technologies/management/ansible/try-it">Read Hat Ansible Automation Paltform</a></li>
+</ul>
+
+<p>The exercises of the first section of this lab guide you through each individual solution mentioned above. You will learn how to access them, what they are used for and how to interact with them using Ansible.</p>
+
+<p>The exercises of the second section of this lab are focused on the actual security operations use cases: situations in which a certain challenge has to be met, usually by interacting not only with one of the mentioned solutions above, but with a mix of them. After setting forth the challenge and explaining what tasks need to be done manually to solve the situation, the lab walks through the steps to automate the tasks with Ansible.</p>
+
+<h2 id="step-10---qradar">Step 1.1 - QRadar - Architecture of the QRadar SIEM</h2>
+
+<p>In this lab you work in a pre-configured lab environment. You will have access to the following hosts and services:</p>
+
+<p>TODO: continue...</p>
+
+<h2 id="step-111---qradar">Step 1.1.1 - QRadar side installation</h2>
+
+<p>If you want to try QRadar in your own setup, install the Coomunity Edition, or apply for a Cloud trail.</p>
+
+<p>TODO: continue...</p>
+
+<h2 id="step-12---architecture-of-the-lab-nodes-and-services">Step 1.2 - Ansible - Architecture of the lab, Nodes and Services</h2>
+
+<p>In this lab you work in a pre-configured lab environment. You will have access to the following hosts and services:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Inventory name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ansible Control Host</td>
+      <td>ansible</td>
+    </tr>
+    <tr>
+      <td>IBM QRadar</td>
+      <td>qradar</td>
+    </tr>
+    <tr>
+      <td>Attacker</td>
+      <td>attacker</td>
+    </tr>
+    <tr>
+      <td>Snort</td>
+      <td>snort</td>
+    </tr>
+    <tr>
+      <td>Check Point Management Server</td>
+      <td>checkpoint</td>
+    </tr>
+    <tr>
+      <td>Check Point Gateway</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Windows Workstation</td>
+      <td>windows-ws</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The lab is set up individually for you. You have your own environment, own services, own virtual machines.</p>
+
+<p><img src="./images/diagram.png" alt="Red Hat Ansible Security Workshop Pod"></p>
+
+<p>For the exercises of section 2 we need to have security incidents. Those should happen on a <strong>target</strong> machine - that is Snort server. It is basically a RHEL installation with Snort installed and running a simplified web server to run attacks against.</p>
+
+<h2 id="step-13---access-the-ansible-environment">Step 1.3 - Access the Ansible Environment</h2>
+
+<p>All automation is done from the Ansible control host, a Red Hat Enterprise Linux machine. To make access to the control host and managing files on it easier there is a online version of VS Code editor installed directly on the control host. This way it can be accessed via a normal web browser. Commands can be executed right from the terminal within the VS Code editor.</p>
+
+<p>Let’s access the Visual Studio Code. Click on the link for VS Code access from the workshop page:</p>
+
+<p><img src="./images/1-vscode-access.png" alt="VS Code Access"></p>
+
+<p>At this point, you will see a <strong>Welcome</strong> page:</p>
+
+<p><img src="./images/1-vscode-welcome-page.png" alt="VS Code - Welcome"></p>
+
+<p>From within this environment, you can create and modify files or open a terminal and execute commands.</p>
+
+<h2 id="step-14---open-and-use-the-terminal-in-vs-code">Step 1.4 - Open and use the Terminal in VS Code</h2>
+
+<p>So let’s open a new terminal in VS Code. In the menu bar, click on <strong>Terminal</strong> &gt; <strong>New Terminal</strong>.</p>
+
+<p><img src="./images/1-vscode-new-terminal.png" alt="VS Code - New Terminal"></p>
+
+<p>A new terminal will be opened in the lower part of your editor and you will be at the command prompt. Note that most prerequisite tasks have already been done for you:</p>
+
+<ul>
+  <li>
+    <p>Ansible software is installed</p>
+  </li>
+  <li>
+    <p>SSH connection and keys are configured</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sudo</code> has been configured on the managed hosts to run commands that require root privileges.</p>
+  </li>
+</ul>
+
+<p>Note that each student is assigned a student number, i.e. X and you should work as the student <x> user on the control node if not explicitly told differently.</x></p>
+
+<p>Next, proceed to check that Ansible has been installed correctly.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">[</span>student&lt;X&gt;@ansible ~]<span class="nv">$ </span>ansible <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>The result should resemble the following:</p>
+
+<p><img src="./images/1-vscode-check-ansible-version.png" alt="VS Code - Check Ansible Version"></p>
+
+<blockquote>
+  <p><strong>Note</strong></p>
+
+  <p>Ansible is keeping configuration management simple. Ansible requires no database or running daemons and can run easily on a laptop. On the managed hosts it needs no running agent.</p>
+</blockquote>
+
+<h2 id="step-15---your-inventory">Step 1.5 - Your inventory</h2>
+
+<p>Let’s open a file in VS Code. In the menu bar, click on <strong>File</strong>, <strong>Open File</strong>. In the middle of the screen, a drop down menu opens with the available file content of the home directory of your user:</p>
+
+<p><img src="./images/1-vscode-filepicker.png" alt="VS Code - VS Code file picker"></p>
+
+<p>Pick <strong>lab_inventory</strong>, this will immediately update the file list. In the new file list, pick <strong>hosts</strong>. This will open the inventory of your environment.</p>
+
+<p>As you see, the inventory of your environment is provided in a static, ini-type file. It looks like the following listing. Please note that the IP addresses provided here are just an example and will be different in your lab environment:</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[all:vars]</span>
+<span class="py">ansible_user</span><span class="p">=</span><span class="s">student1</span>
+<span class="py">ansible_ssh_pass</span><span class="p">=</span><span class="s">ansible</span>
+<span class="py">ansible_port</span><span class="p">=</span><span class="s">22</span>
+
+<span class="nn">[attack]</span>
+<span class="err">attacker</span> <span class="py">ansible_host</span><span class="p">=</span><span class="s">99.88.77.66 ansible_user=ec2-user private_ip=172.16.99.66 private_ip2=172.17.44.66</span>
+
+<span class="nn">[control]</span>
+<span class="err">ansible</span> <span class="py">ansible_host</span><span class="p">=</span><span class="s">22.33.44.55 ansible_user=ec2-user private_ip=192.168.2.3</span>
+
+<span class="nn">[siem]</span>
+<span class="err">qradar</span> <span class="py">ansible_host</span><span class="p">=</span><span class="s">22.44.55.77 ansible_user=admin private_ip=172.16.3.44 ansible_httpapi_pass="Ansible1!" ansible_connection=httpapi ansible_httpapi_use_ssl=yes ansible_httpapi_validate_certs=False ansible_network_os=ibm.qradar.qradar</span>
+
+<span class="nn">[ids]</span>
+<span class="err">snort</span> <span class="py">ansible_host</span><span class="p">=</span><span class="s">33.44.55.66 ansible_user=ec2-user private_ip=192.168.3.4 private_ip2=172.17.33.77</span>
+
+<span class="nn">[firewall]</span>
+<span class="err">checkpoint</span> <span class="py">ansible_host</span><span class="p">=</span><span class="s">44.55.66.77 ansible_user=admin private_ip=192.168.4.5 ansible_network_os=checkpoint ansible_connection=httpapi ansible_httpapi_use_ssl=yes ansible_httpapi_validate_certs=no</span>
+
+<span class="nn">[windows]</span>
+<span class="err">windows-ws</span> <span class="py">ansible_host</span><span class="p">=</span><span class="s">55.66.77.88 ansible_user=Administrator ansible_pass=RedHat19! ansible_port=5986 ansible_connection=winrm ansible_winrm_server_cert_validation=ignore private_ip=192.168.5.6</span>
+</code></pre></div></div>
+
+<p>All the IP addresses are specific to your environment. Whenever the exercises ask you to access a certain machine, you can always look up the IP in the inventory on the control host.</p>
+
+<p>Ansible is already configured to use the inventory specific to your environment. As shown in the example above, the inventory carries more than just the host names and IP addresses. Especially in the case of the Windows workstation, several more parameters are set.</p>
+
+<blockquote>
+  <p><strong>Note</strong></p>
+
+  <p>Not all hosts in your lab can be reached via SSH or WinRM. Some are accessed via REST API, RDP or web browser. During the exercises, each node type will be explained in detail and how to access the resources will be shown step by step.</p>
+</blockquote>
+
+<h2 id="step-16---working-the-labs">Step 1.6 - Working the Labs</h2>
+
+<p>You might have guessed by now this lab is pretty commandline-centric…? So we recommend that you don’t type everything manually, use copy &amp; paste from the browser when appropriate. But stop to think and understand.</p>
+
+<hr>
+
+<p><a href="index.html">Workshop Home</a></p>
+
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <a href="https://redhat.com/">
+            <img class="footer-logo" src="./images/redhat-logo.svg" title="Red Hat" alt="Red Hat">
+          </a>
+          <p class="footer-copyright">Copyright © 2020 Red Hat, Inc.</p>
+          <div class="footer-linkContainer">
+            <a href="https://www.redhat.com/en/about/privacy-policy" class="footer-link">Privacy statement</a>
+            <span class="footer-linkSpacer">|</span>
+            <a href="https://www.ansible.com/security?hsLang=en-us" class="footer-link">Security disclosure</a>
+            <span class="footer-linkSpacer">|</span>
+            <a href="https://www.redhat.com/en/about/all-policies-guidelines" class="footer-link">All policies and guidelines</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  
+
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/ -->
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>Exercise 1.2 - Introduction to IBM QRadar and Ansible Automation | workshops</title>
+  <meta name="generator" content="Jekyll v3.9.0">
+  <meta property="og:title" content="Exercise 1.2 - Introduction to IBM QRadar | workshops">
+  <meta property="og:locale" content="en_US">
+  <meta name="description" content="CGS Inc. Training Course for QRadar using Ansible Automation Platform">
+  <meta property="og:description" content="CGS Inc. Training Course for QRadar using Ansible Automation Platform">
+  <link rel="canonical" href="https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/">
+  <meta property="og:url" content="https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/">
+  <meta property="og:site_name" content="workshops">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:title" content="Exercise 1.2 - Introduction to IBM QRadar and Ansible Automation | workshops">
+  <script type="application/ld+json">
+  {"description":"CGS Inc. Training Course for QRadar using Ansible Automation Platform","url":"https://ansible.github.io/workshops/exercises/ansible_security/1.1-explore/","@type":"WebPage","headline":"Exercise 1.1 - Exploring the lab environment","@context":"https://schema.org"}
+  </script><!-- End Jekyll SEO tag -->
+  <link rel="stylesheet" href="./Exercise 1.1 - Exploring the lab environment _ workshops_files/style.css">
+  <script src="./Exercise%201.1%20-%20Exploring%20the%20lab%20environment%20_%20workshops_files/scale.fix.js.download"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-container">
+        <a href="https://ansible.com/"><img class="header-logo" src=
+        "./Exercise%201.1%20-%20Exploring%20the%20lab%20environment%20_%20workshops_files/redhat-ansible-logo.svg" title="Red Hat Ansible" alt=
+        "Red Hat Ansible"></a> <a class="header-link" href="https://ansible.github.io/workshops/">Workshops Home</a>
+      </div>
+    </header>
+    <section>
+      <br>
+      <a href="index.html">Workshop Home</a>
+      <h1 id="exercise-12---executing-the-first-check-point-playbook">Exercise 1.2 - Introduction to IBM QRadar and Ansible Automation</h1>
+      <h2 id="objectives">Objectives</h2>
+      <p>The objective of this part is to introduce you to the use of IBM QRadar and Ansible Automation. We will give you access to a workshop
+      environment for these toools. But optionally, we provide instructions on how to provision your own environment.</p>
+      <p></p>
+      <h2 id="getting_started">Getting Started with QRadar</h2>
+      <p>QRadar is offered on the Cloud, and on Premises. Both options are available as trials.</p>
+      <p>In this workshop, we are going to provision a QRadar environment for you. But if you want to install your own version, follow these
+      instructions.</p><strong>Download and Install</strong>
+      <p>QRadar Community Edition is packaged as an OVA, making it easier to get up and running with QRadar on your virtualization platform of
+      choice. The OVA file is easily downloaded and requires minimal configuration to get QRadar up and running.</p>
+      <ul>
+        <li>
+          <a href="https://www.ibm.com/community/qradar/wp-content/uploads/sites/5/2020/11/b_qradar_community_edition_7.3.3GA_v1.0.pdf" target=
+          "_blank">Read the documentation</a>
+        </li>
+        <li>
+          <a href="https://www.ibm.com/community/qradar/ce/#" target="_blank">How to install QRadar CE using a VM</a>
+        </li>
+        <li>
+          <a href="https://www.ibm.com/support/pages/release-qradar-742-iso-74220201113144954" target="_blank">How to install QRadar CE from
+          ISO boot iamage</a>
+        </li>
+      </ul>
+	  
+	  <strong>Optionally, check out the a list of common QRadar Use Cases</strong>
+      <ul>
+        <li>
+          <a href="qradar_use_cases.html">Unboxing Use Cases with IBM Security QRadar</a>
+        </li>
+      </ul><strong>Access the QRadar Console</strong>
+      <p>Once installed, you can access the console at http://[your_qradar_ip]/console</p>
+      <h2 id="getting_started">Ansible Introduction</h2>
+      <p>Automation requires an investment in time, technology, and people. But it does not have to be expensive or time consuming. You can
+      make the most of your investment with a choice of an open source, or an enterprise automation platform that delivers agility and
+      flexibility. Solve problems once. Scale automation with control and insight. Collaborate across teams. Manage policy enforcement and
+      governance. Bring the power of automation to your whole organization. And most of all, remediate security incodents when used with SIEM
+      products</p>
+      <p>In this workshop, we are going to provision an Ansible environment for you. But if you want to install your own version, follow these
+      instructions.</p><strong>Download and Install</strong>
+      <p>Ansible is an agentless automation tool that you install on a control node. From the control node, Ansible manages machines and other
+      devices remotely (by default, over the SSH protocol). To install Ansible for use at the command line, simply install the Ansible package
+      on one machine (which could easily be a laptop). You do not need to install a database or run any daemons. Ansible can manage an entire
+      fleet of remote machines from that one control node.</p>
+      <ul>
+        <li>
+          <a href="https://docs.ansible.com/ansible/latest/user_guide/index.html" target="_blank">Read the documentation</a>
+        </li>
+        <li>
+          <a href="https://docs.ansible.com/ansible/latest/user_guide/quickstart.html#quickstart-guide" target="_blank">Watch a quick video
+          overview</a>
+        </li>
+        <li>
+          <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html" target="_blank">How to install Ansible
+          Automation</a>
+        </li>
+      </ul><strong>Access the Ansibles Console</strong>
+      <p>Once installed, you can access the console</p>
+      <hr>
+      <p><a href="index.html">Workshop Home</a></p>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <a href="https://redhat.com/"><img class="footer-logo" src=
+        "./Exercise%201.1%20-%20Exploring%20the%20lab%20environment%20_%20workshops_files/redhat-logo.svg" title="Red Hat" alt="Red Hat"></a>
+        <p class="footer-copyright">Copyright © 2020 Red Hat, Inc.</p>
+        <div class="footer-linkContainer">
+          <a href="https://www.redhat.com/en/about/privacy-policy" class="footer-link">Privacy statement</a> <span class=
+          "footer-linkSpacer">|</span> <a href="https://www.ansible.com/security?hsLang=en-us" class="footer-link">Security disclosure</a>
+          <span class="footer-linkSpacer">|</span> <a href="https://www.redhat.com/en/about/all-policies-guidelines" class="footer-link">All
+          policies and guidelines</a>
+        </div>
+      </div>
+    </footer>
+  </div><!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://ansible.github.io/workshops/exercises/ansible_security/ -->
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>QRadar Workshop - Automatic Incident Response with Red Hat Ansible Security | workshops</title>
+  <meta name="generator" content="Jekyll v3.9.0">
+  <meta property="og:title" content="QRadar Workshop - Automatic Incident Response with Red Hat Ansible Security">
+  <meta property="og:locale" content="en_US">
+  <meta name="description" content="CGS Inc. Training Course for QRadar using Ansible Automation Platform">
+  <meta property="og:description" content="QRadar Workshop - Automatic Incident Response with Red Hat Ansible Security">
+  <link rel="canonical" href="https://ansible.github.io/workshops/exercises/ansible_security/">
+  <meta property="og:url" content="https://ansible.github.io/workshops/exercises/ansible_security/">
+  <meta property="og:site_name" content="workshops">
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:title" content="QRadar Workshop - Automatic Incident Response with Red Hat Ansible Security">
+  <script type="application/ld+json">
+  {"description":"QRadar Workshop - Automatic Incident Response with Red Hat Ansible Security","url":"https://ansible.github.io/workshops/exercises/ansible_security/","@type":"WebPage","headline":"Ansible Workshop - Ansible Security Automation","@context":"https://schema.org"}
+  </script><!-- End Jekyll SEO tag -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./scripts/scale.fix.js.download"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header-container">
+        <a href="https://ansible.com/"><img class="header-logo" src="./images/redhat-ansible-logo.svg" title="Red Hat Ansible" alt=
+        "Red Hat Ansible"></a> <a class="header-link" href="https://ansible.github.io/workshops/">Workshops Home</a>
+      </div>
+    </header>
+    <section>
+      <h1 id="ansible-workshop---ansible-security-automation">QRadar Workshop - Automatic Incident Response with Red Hat Ansible</h1>
+      <p>Computer Generated Solutions (CGS) provides training solutions that improve the skills and effectiveness of your workforce in the
+      areas of information technology, application and product knowledge, leadership, and project management. Check out the <a href=
+      "https://www.cgsinc.com/sites/default/files/training.pdf" target="_blank">CGS Training Solution PDF</a></p>
+      <p></p>
+      <p>IBM® QRadar® Security Information and Event Management (SIEM) helps security teams accurately detect and prioritize threats across the
+      enterprise, and it provides intelligent insights that enable teams to respond quickly to reduce the impact of incidents. QRadar SIEM is
+      available on premises and in a cloud environment.</p>
+      <p>Red Hat Ansible is a simple yet powerful open source tool and IT automation engine for software provisioning, application deployment,
+      orchestration, configuration, and administration, and orchestration that you can learn quickly. Ansible Security Automation is our
+      expansion deeper into the security use case. The goal is to provide a more efficient, streamlined way for security teams to automate
+      their various processes for the identification, search, and response to security events, thus helping you automate your configuration
+      processes and simplify the administration of multiple systems. Ansible essentially pursues the same goals as Puppet, Chef, or Saltstack.
+      Ansible is flexible, lean, and easy to start with. It is so flexible, that we can use it in our security remediation ue cases. In most
+      use cases, it keeps the job simple.</p>
+      <p>Why this workshop?... because you are probably here for one or more of these reasons:</p>
+      <ul>
+        <li>Your threat investigation/remediation time is too long because it involves too many people/teams and tools<br>
+        <strong>You are trying to shorten it.</strong></li>
+        <li>You threat remediation process is fully/mostly manual because SecOps/Change Management doesn’t trust automation.<br>
+        <strong>You are trying to overcome the challenge.</strong></li>
+        <li>Your threat remediation process involves too many steps that have nothing to do with security and ITops are not supporting you.<br>
+        <strong>You are trying to find a way to collaborate.</strong></li>
+        <li>(Optional) You know that the IT Security team in your company uses QRadar and you are, or you want to become the Ansible hero.<br>
+        <strong>Maybe you can help them.</strong></li>
+      </ul>
+      <p>This workshops showcases the above technologies for security and automation that used together, can automatically remediate your
+      security issues in any environment. When completed, you will learn - step by step - how you can, in real life scenarios, perform security
+      incident remediation using QRadar, by calling Red Hat Ansible, to orchestrate 3 security investigation and response activities.</p>
+      <h2 id="time-planning">Time planning</h2>
+      <p>The time required to do the workshops strongly depends on multiple factors: the number of participants, how familiar those are with
+      Linux in general and how much discussions are done in between.</p>
+      <p>Given students with basic experience with QRadar and Ansible:</p>
+      <ul>
+        <li>the introduction takes roughly 30 minutes</li>
+        <li>the first exercise takes roughly one hour</li>
+        <li>the second exercise takes roughly two hours</li>
+      </ul>
+      <p>If your experience is different in schedulung those workshops, please let us know and fill an issue.</p>
+      <h2 id="lab-diagram">Lab Diagram</h2>
+      <p><img src="./images/ansible_security_diagram.png" alt="ansible rhel lab diagram"></p>
+      <h2 id="objective">Objectives</h2>
+      <p>This workshop will introduce you to both QRadar and Ansible, plus will show you some real life scenario use cases for automation of
+      incident responses.</p>
+      <p>The prime benefit of QRadar SIEM for security analysts is that it detects suspected attacks or policy violations and ties helpful
+      information together into offenses to investigate them</p>Some common offenses include these examples:
+      <p></p>
+      <ul>
+        <li>Malware infection</li>
+        <li>P2P traffic</li>
+        <li>Scanner reconnaissance</li>
+        <li>Abnormal connection behavior</li>
+        <li>DNS attack</li>
+        <li>Privileged user monitoring</li>
+        <li>Detect abnormal authentication behavior/Multiple login failures</li>
+        <li>Compliance: Payment card industry data security standard</li>
+        <li>Discovery of cloud usage</li>
+        <li>Container security</li>
+        <li>Detect multi-vector attacks</li>
+        <li>Zero day attack detection</li>
+      </ul>
+      <p>As a matter of fact, QRadar can do much more than those. <a href="qradar_use_cases.html" target="_new">Check out here a more extensive
+      list of QRadar Use Cases</a></p>
+      <p>The usual approach is: Treat offenses as security incidents and have a security analyst investigate them.</p>
+      <p>But... what if we could automate the remediation instead of having a SOC analyst manually take care?. That is the value proposition of
+      this workshop. Let us get into it.</p>
+      <h2 id="section-1">Section 1 - Introduction to QRadar Incident Remediation using Ansible Automation</h2>
+      <ul>
+        <li>
+          <a href="./exercise_1_1.html">Exercise 1.1 - Exploring the lab environment</a>
+        </li>
+        <li>
+          <a href="./exercise_1_2.html">Exercise 1.2 - Introduction to IBM QRadar and Ansible Automation</a>
+        </li>
+        <ul>
+          <li>
+            <a href="./qradar_use_cases.html">Unboxing Use Cases with IBM Security QRadar</a>
+          </li>
+        </ul>
+        <li>
+          <a href="./exercise_1_3.html">Exercise 1.3 - Configuring QRadar to Generate Events, Offenses and Run Ansible playbooks</a>
+        </li>
+        <li>
+          <a href="./exercise_1_4.html">Exercise 1.4 - Executing the first IBM QRadar playbook</a>
+        </li>
+      </ul>
+      <h2 id="section-2---ansible-security-automation-use-cases">Section 2 - QRadar featuring Ansible Security Automation Use Cases</h2>
+      <p>TODO: this is original content, we need to modify it to our purpose, or delete or replace it</p>
+      <ul>
+        <li>
+          <a href="https://ansible.github.io/workshops/exercises/ansible_security/2.1-enrich">Exercise 2.1 - Investigation Enrichment</a>
+        </li>
+        <li>
+          <a href="https://ansible.github.io/workshops/exercises/ansible_security/2.2-threat">Exercise 2.2 - Threat hunting</a>
+        </li>
+        <li>
+          <a href="https://ansible.github.io/workshops/exercises/ansible_security/2.3-incident">Exercise 2.3 - Incident response</a>
+        </li>
+      </ul>
+      <p></p>
+      <h2 id="references">References</h2>
+      <p>The following are additional resources you may want to check out:</p>
+      <p><strong>IBM and Red Hat official resources and content</strong></p>
+      <ul>
+        <strong>QRadar and Ansible integration</strong>
+        <li>
+          <a href="https://www.ansible.com/blog/getting-started-with-ibm-qradar-and-red-hat-ansible-automation-platform" target=
+          "_blank">Getting Started with IBM QRadar and Red Hat Ansible Automation Platform</a>
+        </li>
+        <li>
+          <a href="https://cloud.redhat.com/ansible/automation-hub/ibm/qradar" target="_blank">The IBM Security QRadar Content Collection</a>
+        </li><strong>QRadar</strong>
+        <li>
+          <a href="https://www.ibm.com/community/qradar/" target="_blank">QRadar 101</a>
+        </li>
+        <li>
+          <a href="https://www.ibm.com/us-en/marketplace/ibm-qradar-siem" target="_blank">QRadar SIEM</a>
+        </li>
+        <li>
+          <a href="https://developer.ibm.com/qradar/ce/" target="_blank">QRadar Community Edition (CE)</a>
+        </li>
+        <li>
+          <a href="QRadar%20Documentation" target="_blank">QRadar Documentation</a>
+        </li>
+        <li>
+          <a href="https://ibm.biz/qradarforums" target="_blank">QRadar Support Forum</a>
+        </li>
+        <li>
+          <a href="https://ibm.biz/learnqradar" target="_blank">QRadar Videos</a>
+        </li>
+        <li>
+          <a href="https://ibm.biz/qradarforums" target="_blank">DeveloperWorks</a>
+        </li>
+        <li>
+          <a href="https://github.com/ibm-security-intelligence" target="_blank">Githb</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/IBMSecuritySupport" target="_blank">Youtube Qradar CE</a>
+        </li>
+        <li>
+          <a href="https://www.reddit.com/r/QRadar/" target="_blank">Reddit</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=v_q68FwbjzQ" target="_blank">Creating a custom rule youtube video</a>
+        </li>
+        <li>
+          <a href="http://qradar4all.blogspot.com/2018/10/generate-log-events-for-qradar-ce-731.html" target="_blank">Generate Demo Logs for
+          Qradar CE</a>
+        </li><strong>Ansible</strong>
+        <li>
+          <a href="https://www.ansible.com/blog/topic/ansible" target="_blank">Ansible BLog</a>
+        </li>
+        <li>
+          <a href="https://www.ansible.com/blog/topic/ansible-tower" target="_blank">Ansible Tower Blog</a>
+        </li>
+      </ul>
+      <p><strong>Unofficial Resources</strong></p>
+      <p></p>
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/user/jbravovideos" target="_blank">Jose Bravo Youtube QRadar Tutorials</a>
+        </li>
+        <li>
+          <a href="https://qradarinsights.com/" target="_blank">QRadar Insights Blog</a>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <a href="https://redhat.com/"><img class="footer-logo" src="./images/redhat-logo.svg" title="Red Hat" alt="Red Hat"></a>
+        <p class="footer-copyright">Copyright © 2020 Red Hat, Inc.</p>
+        <div class="footer-linkContainer">
+          <a href="https://www.redhat.com/en/about/privacy-policy" class="footer-link">Privacy statement</a> <span class=
+          "footer-linkSpacer">|</span> <a href="https://www.ansible.com/security?hsLang=en-us" class="footer-link">Security disclosure</a>
+          <span class="footer-linkSpacer">|</span> <a href="https://www.redhat.com/en/about/all-policies-guidelines" class="footer-link">All
+          policies and guidelines</a>
+        </div>
+      </div>
+    </footer>
+  </div><!--[if !IE]><script>fixScale(document);</script><![endif]-->
+</body>
+</html>
